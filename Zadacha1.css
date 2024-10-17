@@ -1,0 +1,170 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+}
+
+h3 {
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#generateTableBtn {
+    display: block; 
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+table {
+    margin: 20px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td input[type="number"] {
+    width: 80px;
+    text-align: center;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e7f4e4;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.result h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.result p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#mynetwork {
+    width: 600px;
+    height: 400px;
+    border: 2px solid lightgray;
+    display: none; 
+    margin-top: 20px; 
+    animation: growIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table input {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Анимация при промяна на стойностите в таблицата */
+@keyframes highlightChange {
+    from {
+        background-color: #4CAF50;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+td.updated {
+    animation: highlightChange 1s ease-in-out;
+}
+
+/* Анимация за плавно показване на графа */
+@keyframes growIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rowSlide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+table tr {
+    animation: rowSlide 0.5s ease;
+}
